@@ -14,6 +14,7 @@ gpg --decrypt [file]
 
 #Key locations
 
+/bashrc
 /etc/yum.repos.d
 epel.repo
 epel-testing.repo ##Required (as of 21-May-2020) for Terminator
@@ -24,6 +25,24 @@ epel-testing.repo ##Required (as of 21-May-2020) for Terminator
 
 ##Terminator
 https://terminator-gtk3.readthedocs.io/en/latest/
+
+#Setting up Terminal Servers in /bashrc
+
+##User specific aliases and functions
+function funcRDP() {
+    xfreerdp +compression /bpp:32 /w:1440 /h:900 /u:wgelpi /d:win /cert-ignore +clipboard /drive:wgelpi,/home/wgelpi /v:$1
+}
+
+function funcRDPfull() {
+    xfreerdp +compression /bpp:32 /f /u:wgelpi@win /cert-ignore +clipboard /drive:wgelpi,/home/wgelpi /v:$1
+}
+
+##tableau VM - Login to Tableau terminal services
+alias tableauvm="funcRDP bitblprod.win.redhat.com"
+alias tableauvmfull="funcRDPfull bitblprod.win.redhat.com"
+
+##Remove duplicates from your audit logs
+export HISTCONTROL=erasedups
 
 #Key URLs
 
@@ -50,4 +69,3 @@ git commit -m "updated README.md"
 git push origin master
 =======
 >>>>>>> 79492cf83a00ee78620f0c111e5f1b333aa89358
-
