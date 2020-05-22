@@ -38,6 +38,16 @@ https://www.interserver.net/tips/kb/extract-tar-gz-files-using-linux-command-lin
 
 #GitHub
 
+##Merging content to GitHub
+git clone https://github.com/chanduakkin/test_repo.git
+cd test_repo/
+ls -ltr
+vim README.md 
+git status
+git add -A
+git status
+git commit -m "updated README.md"
+git push origin master
 =======
 >>>>>>> 79492cf83a00ee78620f0c111e5f1b333aa89358
 
