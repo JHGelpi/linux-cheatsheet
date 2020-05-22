@@ -1,0 +1,43 @@
+<<<<<<< HEAD
+Linux CLI cheat sheet
+
+#GPG
+
+##Import Key
+gpg --import [file]
+
+##Encrypt
+gpg --encrypt --recipient [recipient] --recipient wgelpi@redhat.com [file]
+
+##Decrypt
+gpg --decrypt [file]
+
+#Key locations
+
+/etc/yum.repos.d
+epel.repo
+epel-testing.repo ##Required (as of 21-May-2020) for Terminator
+	##Key command to enable just single packages to flow through epel-testing
+	includepkgs=terminator
+
+#Key packages/repos
+
+##Terminator
+https://terminator-gtk3.readthedocs.io/en/latest/
+
+#Key URLs
+
+##PyCharm
+https://www.jetbrains.com/help/pycharm/installation-guide.html#
+
+##Find/Search for files
+https://fedoramagazine.org/commandline-quick-tips-locate-file/
+
+##Extracting tar files
+https://www.interserver.net/tips/kb/extract-tar-gz-files-using-linux-command-line/
+
+#GitHub
+
+=======
+>>>>>>> 79492cf83a00ee78620f0c111e5f1b333aa89358
+
