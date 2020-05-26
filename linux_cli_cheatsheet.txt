@@ -46,6 +46,9 @@ export HISTCONTROL=erasedups
 
 #Key URLs
 
+##Bash-Scripting Guide
+https://tldp.org/LDP/abs/html/
+
 ##PyCharm
 https://www.jetbrains.com/help/pycharm/installation-guide.html#
 
