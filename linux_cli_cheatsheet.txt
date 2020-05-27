@@ -61,6 +61,9 @@ https://fedoramagazine.org/commandline-quick-tips-locate-file/
 ##Extracting tar files
 https://www.interserver.net/tips/kb/extract-tar-gz-files-using-linux-command-line/
 
+##Dive Into Python 3
+https://diveintopython3.problemsolving.io/
+
 #Simple bash script example
 ```
 #!/bin/bash
