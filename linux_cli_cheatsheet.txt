@@ -61,6 +61,58 @@ https://fedoramagazine.org/commandline-quick-tips-locate-file/
 ##Extracting tar files
 https://www.interserver.net/tips/kb/extract-tar-gz-files-using-linux-command-line/
 
+#Simple bash script example
+```
+#!/bin/bash
+# Generate a ldif file programatically for bulk ldap updates and custom alias creation
+# 
+
+ldapDNgroup="$1"
+		  # make sure file exist and readable
+if [ ! -f $FILE ]; then
+		echo "$FILE : does not exists"
+		exit 1
+elif [ ! -r $FILE ]; then
+		echo "$FILE: can not read"
+		exit 2
+fi
+
+funEchoConfig () {
+
+groupID=$1
+description=$2
+ownerID=$3
+noteS=$4
+
+echo "dn: cn=${groupID},ou=adhoc,ou=managedGroups,dc=redhat,dc=com"
+echo "owner: uid=${ownerID},ou=users,dc=redhat,dc=com"
+echo "owner: uid=abhidas,ou=users,dc=redhat,dc=com"
+echo "owner: uid=skamired,ou=users,dc=redhat,dc=com"
+echo "rhatRoverGroupName: ${groupID}"
+echo "description: ${description}"
+echo "rhatGroupNotes: ${noteS}"
+echo "cn: ${groupID}"
+echo "objectClass: rhatRoverGroup"
+echo "objectClass: groupOfUniqueNames"
+echo "objectClass: top"
+echo ""
+}
+
+OLDIFS=${IFS}
+IFS=,
+
+while read group desc owner notes ; do	
+
+    #echo $group
+    #echo $desc
+    #echo $owner
+    #echo $notes
+    funEchoConfig "${group}" "${desc}" "${owner}" "${notes}"
+
+done < "$ldapDNgroup"
+
+IFS=${OLDIFS}
+```
 #GitHub
 
 ##Merging content to GitHub
