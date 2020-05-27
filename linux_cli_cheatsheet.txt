@@ -46,6 +46,9 @@ export HISTCONTROL=erasedups
 
 #Key URLs
 
+##Markdown Guide
+https://www.markdownguide.org/getting-started/
+
 ##Bash-Scripting Guide
 https://tldp.org/LDP/abs/html/
 
