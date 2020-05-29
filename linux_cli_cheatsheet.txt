@@ -46,10 +46,11 @@ function funcRDPfull() {
 ```
 #git commit function 
 function gitPush(){
-        #eval commitstring="$1"
+        eval commitstring="$1"
         git status
         git add -A
-        #git commit -m "\${commitstring}"
+        git commit -m "\${commitstring}"
+        #git commit -m "Add git commit function"
         git push origin master
         git status
 }
