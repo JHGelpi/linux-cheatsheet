@@ -28,6 +28,10 @@ https://terminator-gtk3.readthedocs.io/en/latest/
 
 #Setting up Terminal Servers in /bashrc
 
+##Access ./bashrc
+`vim ~/.bashrc`
+`source ~/.bashrc`
+
 ##User specific aliases and functions
 function funcRDP() {
     xfreerdp +compression /bpp:32 /w:1440 /h:900 /u:wgelpi /d:win /cert-ignore +clipboard /drive:wgelpi,/home/wgelpi /v:$1
@@ -36,6 +40,22 @@ function funcRDP() {
 function funcRDPfull() {
     xfreerdp +compression /bpp:32 /f /u:wgelpi@win /cert-ignore +clipboard /drive:wgelpi,/home/wgelpi /v:$1
 }
+
+##./bashrc function to push updates to GitHub
+#git commit function
+```
+#git commit function 
+function gitPush(){
+        #eval commitstring="$1"
+        git status
+        git add -A
+        #git commit -m "\${commitstring}"
+        git push origin master
+        git status
+}
+
+alias gitpush="gitPush"
+```
 
 ##tableau VM - Login to Tableau terminal services
 alias tableauvm="funcRDP bitblprod.win.redhat.com"
