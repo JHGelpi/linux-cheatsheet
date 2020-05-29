@@ -64,6 +64,9 @@ https://www.interserver.net/tips/kb/extract-tar-gz-files-using-linux-command-lin
 ##Dive Into Python 3
 https://diveintopython3.problemsolving.io/
 
+##Postman install
+https://learning.postman.com/docs/postman/launching-postman/installation-and-updates/#installing-postman-on-linux
+
 #Simple bash script example
 ```
 #!/bin/bash
