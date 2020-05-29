@@ -46,16 +46,32 @@ function funcRDPfull() {
 ```
 #git commit function 
 function gitPush(){
-        eval commitstring="$1"
-        git status
-        git add -A
-        git commit -m "\${commitstring}"
-        #git commit -m "Add git commit function"
-        git push origin master
-        git status
+        #echo -n "Enter file/directory to push [${1}] > "
+        #echo -n "Enter commit message [${2}] > "
+        if [[ -n ${1} ]] && [[ -n ${2} ]]
+        then
+                git status
+                git add ${1}
+                git commit -m "${2}"
+                git push origin master
+                git status
+        fi
+        #       else
+        #               echo "No commit status provided"
+        #       fi
+        #else
+        #       echo "No file/directory provided"
+        #fi
 }
 
 alias gitpush="gitPush"
+
+function testParms(){
+        echo ${1}
+        echo ${2}
+}
+
+alias testparm="testParms"
 ```
 
 ##tableau VM - Login to Tableau terminal services
