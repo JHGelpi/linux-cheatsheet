@@ -158,6 +158,7 @@ https://docs.gitlab.com/ee/gitlab-basics/start-using-git.html
 # GitHub
 
 ## Merging content to GitHub
+```
 git clone https://github.com/chanduakkin/test_repo.git
 cd test_repo/
 ls -ltr
@@ -167,5 +168,6 @@ git add -A
 git status
 git commit -m "updated README.md"
 git push origin master
+```
 =======
 >>>>>>> 79492cf83a00ee78620f0c111e5f1b333aa89358
