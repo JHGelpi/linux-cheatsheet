@@ -1,18 +1,18 @@
 <<<<<<< HEAD
 Linux CLI cheat sheet
 
-#GPG
+# GPG
 
-##Import Key
+## Import Key
 gpg --import [file]
 
-##Encrypt
+## Encrypt
 gpg --encrypt --recipient [recipient] --recipient wgelpi@redhat.com [file]
 
-##Decrypt
+## Decrypt
 gpg --decrypt [file]
 
-#Key locations
+# Key locations
 
 /bashrc
 /etc/yum.repos.d
@@ -21,18 +21,18 @@ epel-testing.repo ##Required (as of 21-May-2020) for Terminator
 	##Key command to enable just single packages to flow through epel-testing
 	includepkgs=terminator
 
-#Key packages/repos
+# Key packages/repos
 
-##Terminator
+## Terminator
 https://terminator-gtk3.readthedocs.io/en/latest/
 
-#Setting up Terminal Servers in /bashrc
+# Setting up Terminal Servers in /bashrc
 
-##Access ./bashrc
+## Access ./bashrc
 `vim ~/.bashrc`
 `source ~/.bashrc`
 
-##User specific aliases and functions
+## User specific aliases and functions
 function funcRDP() {
     xfreerdp +compression /bpp:32 /w:1440 /h:900 /u:wgelpi /d:win /cert-ignore +clipboard /drive:wgelpi,/home/wgelpi /v:$1
 }
@@ -41,8 +41,9 @@ function funcRDPfull() {
     xfreerdp +compression /bpp:32 /f /u:wgelpi@win /cert-ignore +clipboard /drive:wgelpi,/home/wgelpi /v:$1
 }
 
-##./bashrc function to push updates to GitHub
-#git commit function
+## ./bashrc function to push updates to GitHub
+
+# git commit function
 ```
 #git commit function 
 function gitPush(){
@@ -63,40 +64,40 @@ function testParms(){
 alias testparm="testParms"
 ```
 
-##tableau VM - Login to Tableau terminal services
+## tableau VM - Login to Tableau terminal services
 alias tableauvm="funcRDP bitblprod.win.redhat.com"
 alias tableauvmfull="funcRDPfull bitblprod.win.redhat.com"
 
-##Remove duplicates from your audit logs
+## Remove duplicates from your audit logs
 export HISTCONTROL=erasedups
 
-#Key URLs
+# Key URLs
 
-##Markdown Guide
+## Markdown Guide
 https://www.markdownguide.org/getting-started/
 
-##Bash-Scripting Guide
+## Bash-Scripting Guide
 https://tldp.org/LDP/abs/html/
 
-##PyCharm
+## PyCharm
 https://www.jetbrains.com/help/pycharm/installation-guide.html#
 
-##Find/Search for files
+## Find/Search for files
 https://fedoramagazine.org/commandline-quick-tips-locate-file/
 
-##Extracting tar files
+## Extracting tar files
 https://www.interserver.net/tips/kb/extract-tar-gz-files-using-linux-command-line/
 
-##Dive Into Python 3
+## Dive Into Python 3
 https://diveintopython3.problemsolving.io/
 
-##Postman install
+## Postman install
 https://learning.postman.com/docs/postman/launching-postman/installation-and-updates/#installing-postman-on-linux
 
-##Create a pull request in GitHub
+## Create a pull request in GitHub
 https://opensource.com/article/19/7/create-pull-request-github
 
-#Simple bash script example
+# Simple bash script example
 ```
 #!/bin/bash
 # Generate a ldif file programatically for bulk ldap updates and custom alias creation
@@ -149,14 +150,14 @@ done < "$ldapDNgroup"
 IFS=${OLDIFS}
 ```
 
-#Gitlab
+# Gitlab
 
-##Adding content to Gitlab via CLI
+## Adding content to Gitlab via CLI
 https://docs.gitlab.com/ee/gitlab-basics/start-using-git.html
 
-#GitHub
+# GitHub
 
-##Merging content to GitHub
+## Merging content to GitHub
 git clone https://github.com/chanduakkin/test_repo.git
 cd test_repo/
 ls -ltr
