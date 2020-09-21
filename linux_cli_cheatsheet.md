@@ -93,6 +93,9 @@ https://diveintopython3.problemsolving.io/
 ##Postman install
 https://learning.postman.com/docs/postman/launching-postman/installation-and-updates/#installing-postman-on-linux
 
+##Create a pull request in GitHub
+https://opensource.com/article/19/7/create-pull-request-github
+
 #Simple bash script example
 ```
 #!/bin/bash
@@ -145,6 +148,12 @@ done < "$ldapDNgroup"
 
 IFS=${OLDIFS}
 ```
+
+#Gitlab
+
+##Adding content to Gitlab via CLI
+https://docs.gitlab.com/ee/gitlab-basics/start-using-git.html
+
 #GitHub
 
 ##Merging content to GitHub
