@@ -1,6 +1,13 @@
 <<<<<<< HEAD
 Linux CLI cheat sheet
 
+# Ansible Config
+
+## Run Ansible from GitHub
+```
+sudo ansible-pull -U https://github.com/JHGelpi/ansible_workstation.git
+```
+
 # GPG
 
 ## Import Key
